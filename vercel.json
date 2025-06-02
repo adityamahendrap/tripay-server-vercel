@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "api/create-transaction.js",
       "use": "@vercel/node"
     }
@@ -11,6 +15,16 @@
       "src": "/api/create-transaction",
       "methods": ["POST", "OPTIONS"],
       "dest": "/api/create-transaction.js"
+    },
+    {
+      "src": "/api/check-transaction",
+      "methods": ["GET", "OPTIONS"],
+      "dest": "/api/check-transaction.js"
+    },
+    {
+      "src": "/bot",
+      "methods": ["GET", "OPTIONS"],
+      "dest": "index.html"
     }
   ]
 }
