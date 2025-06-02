@@ -6,12 +6,12 @@
       "use": "@vercel/node"
     },
     {
-      "src": "api/create-transaction.js",
-      "use": "@vercel/node"
+      "src": "public/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-     {
+    {
       "src": "/bot",
       "dest": "/public/index.html"
     },
