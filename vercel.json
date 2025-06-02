@@ -11,19 +11,19 @@
     }
   ],
   "routes": [
-    {
+     {
       "src": "/bot",
       "dest": "/public/index.html"
+    },
+    {
+      "src": "/api/create-transaction",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/create-transaction.js"
     },
     {
       "src": "/api/check-transaction",
       "methods": ["GET", "OPTIONS"],
       "dest": "/api/check-transaction.js"
-    },
-    {
-      "src": "/bot",
-      "methods": ["GET", "OPTIONS"],
-      "dest": "public/index.html"
     }
   ]
 }
